@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./components.css";
 
 function Popular() {
     const [popular, setPopular] = useState([]);
@@ -18,10 +19,12 @@ function Popular() {
 
     return (
         <div>
+            <h3>Popular Picks</h3>
             {popular.map((recipe) => {
                 return (
-                    <div key={recipe.id}>
+                    <div className="popular" key={recipe.id}>
                         <p>{recipe.title}</p>
+                        <img src={recipe.image} alt={recipe.title} />
                     </div>
                 );
             })}

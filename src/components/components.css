@@ -1,0 +1,9 @@
+.popular {
+    margin: 4rem 0rem;
+}
+
+.popular>img {
+    min-height: 25rem;
+    overflow:hidden;
+    border-radius: 2rem;
+}
