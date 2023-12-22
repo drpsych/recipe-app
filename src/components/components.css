@@ -1,9 +1,13 @@
-.popular {
+.wrapper {
     margin: 4rem 0rem;
 }
 
-.popular>img {
+.card {
     min-height: 25rem;
-    overflow:hidden;
     border-radius: 2rem;
+    overflow:hidden;
+    
+    img {
+        border-radius: 2rem;
+    }
 }

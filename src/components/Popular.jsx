@@ -18,11 +18,11 @@ function Popular() {
     };
 
     return (
-        <div>
+        <div className="wrapper">
             <h3>Popular Picks</h3>
             {popular.map((recipe) => {
                 return (
-                    <div className="popular" key={recipe.id}>
+                    <div className="card" key={recipe.id}>
                         <p>{recipe.title}</p>
                         <img src={recipe.image} alt={recipe.title} />
                     </div>
