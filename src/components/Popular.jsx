@@ -41,6 +41,11 @@ const Wrapper = styled.div`
 const Card = styled.div`
     min-height: 25rem;
     border-radius: 2rem;
+    overflow: hidden;
+
+    img {
+        border-radius: 2rem;
+    }
 `;
 
 export default Popular;
