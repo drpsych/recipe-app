@@ -19,7 +19,7 @@ function Popular() {
             setPopular(JSON.parse(check));
         } else {
             const api = await fetch(
-                `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=6`
+                `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=8`
             );
             const data = await api.json();
 
@@ -33,7 +33,7 @@ function Popular() {
     return (
         <div>
             <Wrapper>
-                <h3>Popular Picks</h3>
+                <h3>Inspiration</h3>
 
                 <Splide
                     options={{
