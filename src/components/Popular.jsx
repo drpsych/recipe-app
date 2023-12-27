@@ -31,12 +31,12 @@ function Popular() {
 
     return (
         <div className="wrapper">
-            <h3>Popular Picks</h3>
+            <h3>Inspirational Picks</h3>
             <Splide
                 options={{
                     perPage: 4,
                     arrows: false,
-                    pagination: false,
+                    pagination: true,
                     drag: "free",
                     gap: "5rem",
                 }}
