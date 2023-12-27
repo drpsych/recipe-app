@@ -1,7 +1,7 @@
 import { FaHamburger, FaPizzaSlice } from "react-icons/fa";
 import { GiTacos, GiChopsticks } from "react-icons/gi";
 
-function Categories() {
+function Category() {
     return (
         <div className="list">
             <div>
@@ -24,4 +24,4 @@ function Categories() {
     );
 }
 
-export default Categories;
+export default Category;
