@@ -19,7 +19,7 @@ function Veggie() {
             setVeggie(JSON.parse(check));
         } else {
             const api = await fetch(
-                `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=8&tags=vegetarian`
+                `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=8&diet=vegetarian`
             );
             const data = await api.json();
 
@@ -32,11 +32,14 @@ function Veggie() {
 
     return (
         <div className="wrapper">
-            <h3>Our Vegetarian Picks</h3>
+            <Link to={`/vegetarian`} className="text-link">
+                <h3>Vegetarian Picks</h3>
+            </Link>
+            {/* <h3>Our Vegetarian Picks</h3> */}
             <Splide
                 options={{
                     perPage: 3,
-                    arrows: false,
+                    arrows: true,
                     pagination: true,
                     drag: "free",
                     gap: "5rem",

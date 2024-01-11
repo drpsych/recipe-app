@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { motion } from "framer-motion";
+
 import "./pages.css";
 
 function Cuisine() {
@@ -22,13 +22,7 @@ function Cuisine() {
     }, [params.type]);
 
     return (
-        <motion.div
-            className="grid"
-            animate={{ opacity: 1 }}
-            initial={{ opacity: 0 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-        >
+        <div className="grid">
             {cuisine.map((item) => {
                 return (
                     <div className="recipe-card" key={item.id}>
@@ -39,7 +33,7 @@ function Cuisine() {
                     </div>
                 );
             })}
-        </motion.div>
+        </div>
     );
 }
 

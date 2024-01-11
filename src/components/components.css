@@ -1,6 +1,11 @@
 .wrapper {
     margin: 4rem 0rem;
+    .text-link {
+        color: inherit;
+        text-decoration: inherit;
+    }
 }
+
 
 .card {
     min-height: 25rem;
@@ -84,7 +89,7 @@
 }
 
 form.search {
-    margin: 0rem 20rem;
+    margin: 2rem 20rem;
 
     div {
         position: relative;
@@ -111,3 +116,26 @@ form.search {
         color: white;
     }
 }
+
+.nav {
+    background: #e94057;
+    margin: -1% -6%;
+    padding: 4rem 5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    svg {
+        font-size: 2.5rem;
+        color: black;
+    }
+
+    .logo {
+        text-decoration: none;
+        color: black;
+        font-size: 2rem;
+        font-weight: 400;
+        font-family: "Lobster Two", cursive;
+    }
+}
+

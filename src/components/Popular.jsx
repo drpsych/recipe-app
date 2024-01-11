@@ -32,11 +32,14 @@ function Popular() {
 
     return (
         <div className="wrapper">
-            <h3>Inspirational Picks</h3>
+            <Link to={`/inspiration`} className="text-link">
+                <h3>Inspirational Picks</h3>
+            </Link>
+            {/* <h3>Inspirational Picks</h3> */}
             <Splide
                 options={{
-                    perPage: 4,
-                    arrows: false,
+                    perPage: 2,
+                    arrows: true,
                     pagination: true,
                     drag: "free",
                     gap: "5rem",
