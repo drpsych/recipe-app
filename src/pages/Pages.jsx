@@ -4,8 +4,8 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Cuisine from "./Cuisine";
 import Searched from "./Searched";
 import Recipe from "./Recipe";
-import { AnimatePresence } from "framer-motion";
 import Inspirational from "./Inspirational";
+import Vegetarian from "./Vegetarian";
 
 function Pages() {
     const location = useLocation();
@@ -16,6 +16,7 @@ function Pages() {
             <Route path="/searched/:search" element={<Searched />} />
             <Route path="/recipe/:name" element={<Recipe />} />
             <Route path="/inspiration" element={<Inspirational />} />
+            <Route path="/vegetarian" element={<Vegetarian />} />
         </Routes>
     );
 }

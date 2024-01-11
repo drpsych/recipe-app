@@ -32,10 +32,7 @@ function Popular() {
 
     return (
         <div className="wrapper">
-            <Link to={`/inspiration`} className="text-link">
-                <h3>Inspirational Picks</h3>
-            </Link>
-            {/* <h3>Inspirational Picks</h3> */}
+            <h3>Inspirational Picks</h3>
             <Splide
                 options={{
                     perPage: 2,
@@ -62,6 +59,9 @@ function Popular() {
                     );
                 })}
             </Splide>
+            <Link to={`/inspiration`} className="text-link center">
+                <h3>Get Inspired!</h3>
+            </Link>
         </div>
     );
 }

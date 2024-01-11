@@ -32,10 +32,7 @@ function Veggie() {
 
     return (
         <div className="wrapper">
-            <Link to={`/vegetarian`} className="text-link">
-                <h3>Vegetarian Picks</h3>
-            </Link>
-            {/* <h3>Our Vegetarian Picks</h3> */}
+            <h3>Our Vegetarian Picks</h3>
             <Splide
                 options={{
                     perPage: 3,
@@ -62,6 +59,9 @@ function Veggie() {
                     );
                 })}
             </Splide>
+            <Link to={`/vegetarian`} className="text-link center">
+                <h3>View More Vegetarian Options</h3>
+            </Link>
         </div>
     );
 }

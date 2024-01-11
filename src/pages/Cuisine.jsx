@@ -5,6 +5,7 @@ import "./pages.css";
 
 function Cuisine() {
     const [cuisine, setCuisine] = useState([]);
+    const [title, setTitle] = useState("");
     let params = useParams();
 
     const getCuisine = async (name) => {
@@ -19,20 +20,24 @@ function Cuisine() {
     useEffect(() => {
         getCuisine(params.type);
         console.log(params.type);
+        setTitle(params.type);
     }, [params.type]);
 
     return (
-        <div className="grid">
-            {cuisine.map((item) => {
-                return (
-                    <div className="recipe-card" key={item.id}>
-                        <Link to={`/recipe/${item.id}`}>
-                            <img src={item.image} alt={item.title} />
-                            <h4>{item.title}</h4>
-                        </Link>
-                    </div>
-                );
-            })}
+        <div>
+            <h3 className="center">{title} Recipes</h3>
+            <div className="grid">
+                {cuisine.map((item) => {
+                    return (
+                        <div className="recipe-card" key={item.id}>
+                            <Link to={`/recipe/${item.id}`}>
+                                <img src={item.image} alt={item.title} />
+                                <h4>{item.title}</h4>
+                            </Link>
+                        </div>
+                    );
+                })}
+            </div>
         </div>
     );
 }

@@ -19,13 +19,7 @@ function Searched() {
     }, [params.search]);
 
     return (
-        <div
-            className="grid"
-            animate={{ opacity: 1 }}
-            initial={{ opacity: 0 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-        >
+        <div className="grid">
             {searchedRecipes.map((item) => {
                 return (
                     <div className="recipe-card" key={item.id}>

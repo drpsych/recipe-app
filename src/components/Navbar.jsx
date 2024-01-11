@@ -7,11 +7,13 @@ function Navbar() {
     return (
         <div>
             <div className="nav">
-                <div></div>
                 <GiKnifeFork />
                 <Link className="logo" to={"/"}>
                     whats for dinner?
                 </Link>
+                {/* <div className="menu">
+                    <h4>test</h4>
+                </div> */}
             </div>
         </div>
     );
