@@ -2,15 +2,15 @@ import Category from "./components/Category";
 import Search from "./components/Search";
 import Pages from "./pages/Pages";
 import { BrowserRouter } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import Navigation from "./MenuBar/Navigation";
 
 function App() {
     return (
         <div className="App">
             <BrowserRouter>
-                <Navbar className="nav" />
+                <Navigation />
                 <Search />
-                <Category />
+                {/* <Category /> */}
                 <Pages />
             </BrowserRouter>
         </div>

@@ -15,6 +15,7 @@
     }
 
     h4 {
+        color: black;
         text-align: center;
         padding: 1rem;
     }
@@ -65,5 +66,4 @@ h3.center {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 900;
-
 }

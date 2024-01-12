@@ -23,7 +23,7 @@ function Inspirational() {
             <div className="grid">
                 {inspirational.map((item) => {
                     return (
-                        <div className="recipe-card" key={item.id}>
+                        <div className="recipe-card1" key={item.id}>
                             <Link to={`/recipe/${item.id}`}>
                                 <img src={item.image} alt={item.title} />
                                 <h4>{item.title}</h4>
