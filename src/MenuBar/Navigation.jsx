@@ -1,10 +1,8 @@
 import React from "react";
-import "./components.css";
+import "./navigation.css";
 import { GiKnifeFork } from "react-icons/gi";
 import { Link, NavLink } from "react-router-dom";
-import { Container, NavDropdown, Navbar, Nav } from "react-bootstrap";
-// import "bootstrap/dist/css/bootstrap.min.css";
-import "./bootstrap.css";
+import { Nav } from "react-bootstrap";
 
 function Navigation() {
     return (
@@ -14,47 +12,45 @@ function Navigation() {
                 <Link className="logo" to={"/"}>
                     whats for dinner?
                 </Link>
-                <Navbar expand="lg" id="local-bootstrap" className="menu">
-                    <Container>
-                        <Nav className="me-auto">
-                            <Nav.Link className="nav-link" href="/">
-                                Home
-                            </Nav.Link>
-                            <NavDropdown
-                                title="Cuisine"
-                                id="collapsible-nav-dropdown"
-                                className="drop-background"
-                            >
-                                <NavDropdown.Item>
-                                    <NavLink to={"cuisine/American"}>
-                                        American
-                                    </NavLink>
-                                </NavDropdown.Item>
-                                <NavDropdown.Item>
-                                    <NavLink to={"cuisine/Italian"}>
-                                        Italian
-                                    </NavLink>
-                                </NavDropdown.Item>
-                                <NavDropdown.Item>
-                                    <NavLink to={"cuisine/Mexican"}>
-                                        Mexican
-                                    </NavLink>
-                                </NavDropdown.Item>
-                                <NavDropdown.Item>
-                                    <NavLink to={"cuisine/Asian"}>
-                                        Asian
-                                    </NavLink>
-                                </NavDropdown.Item>
-                                <NavDropdown.Item>
-                                    <NavLink to={"cuisine/Indian"}>
-                                        Indian
-                                    </NavLink>
-                                </NavDropdown.Item>
-                            </NavDropdown>
-                            <Nav.Link href="#home">Dessert</Nav.Link>
-                        </Nav>
-                    </Container>
-                </Navbar>
+                <div className="navbar menu">
+                    <Nav.Link className="nav-link" href="/">
+                        Home
+                    </Nav.Link>
+                    <div className="dropdown">
+                        <button className="dropbtn">
+                            Cuisine <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div className="dropdown-content">
+                            <NavLink to={"cuisine/Asian"}>Asian</NavLink>
+                            <NavLink to={"cuisine/American"}>American</NavLink>
+                            <NavLink to={"cuisine/British"}>British</NavLink>
+                            <NavLink to={"cuisine/Caribbean"}>
+                                Caribbean
+                            </NavLink>
+                            <NavLink to={"cuisine/French"}>French</NavLink>
+                            <NavLink to={"cuisine/German"}>German</NavLink>
+                            <NavLink to={"cuisine/Greek"}>Greek</NavLink>
+                            <NavLink to={"cuisine/Indian"}>Indian</NavLink>
+                            <NavLink to={"cuisine/Italian"}>Italian</NavLink>
+                            <NavLink to={"cuisine/Mexican"}>Mexican</NavLink>
+                        </div>
+                    </div>
+                    <div className="dropdown">
+                        <button className="dropbtn">
+                            Diet <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div className="dropdown-content">
+                            <NavLink to={"diet/Vegetarian"}>Vegetarian</NavLink>
+                            <NavLink to={"diet/Vegan"}>Vegan</NavLink>
+                            <NavLink to={"diet/Pescetarian"}>
+                                Pescetarian
+                            </NavLink>
+                            <NavLink to={"diet/Gluten Free"}>
+                                Gluten Free
+                            </NavLink>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );

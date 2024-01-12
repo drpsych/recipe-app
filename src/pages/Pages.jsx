@@ -6,6 +6,7 @@ import Searched from "./Searched";
 import Recipe from "./Recipe";
 import Inspirational from "./Inspirational";
 import Vegetarian from "./Vegetarian";
+import Diet from "./Diet";
 
 function Pages() {
     const location = useLocation();
@@ -17,6 +18,7 @@ function Pages() {
             <Route path="/recipe/:name" element={<Recipe />} />
             <Route path="/inspiration" element={<Inspirational />} />
             <Route path="/vegetarian" element={<Vegetarian />} />
+            <Route path="/diet/:type" element={<Diet />} />
         </Routes>
     );
 }

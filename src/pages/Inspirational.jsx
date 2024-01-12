@@ -10,7 +10,7 @@ function Inspirational() {
 
     const getInspirational = async () => {
         const api = await fetch(
-            `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=50`
+            `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&&number=${process.env.REACT_APP_RESULT_NUMBER}`
         );
         const data = await api.json();
         setInspirational(data.recipes);
@@ -23,7 +23,7 @@ function Inspirational() {
             <div className="grid">
                 {inspirational.map((item) => {
                     return (
-                        <div className="recipe-card1" key={item.id}>
+                        <div className="recipe-card" key={item.id}>
                             <Link to={`/recipe/${item.id}`}>
                                 <img src={item.image} alt={item.title} />
                                 <h4>{item.title}</h4>
