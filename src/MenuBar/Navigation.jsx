@@ -12,7 +12,7 @@ function Navigation() {
                 <Link className="logo" to={"/"}>
                     whats for dinner?
                 </Link>
-                <div className="navbar menu">
+                <div className="menu">
                     <Nav.Link className="nav-link" href="/">
                         Home
                     </Nav.Link>

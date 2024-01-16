@@ -45,6 +45,7 @@ function Recipe() {
                                 __html: details.summary,
                             }}
                         ></h3>
+                        <h2>Instructions</h2>
                         <h3
                             dangerouslySetInnerHTML={{
                                 __html: details.instructions,
@@ -53,11 +54,16 @@ function Recipe() {
                     </div>
                 )}
                 {activeTab === "ingredients" && (
-                    <ul>
-                        {details.extendedIngredients.map((ingredient) => (
-                            <li key={ingredient.id}>{ingredient.original}</li>
-                        ))}
-                    </ul>
+                    <div>
+                        <h3>Ingredients</h3>
+                        <ul>
+                            {details.extendedIngredients.map((ingredient) => (
+                                <li key={ingredient.id}>
+                                    {ingredient.original}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 )}
             </div>
         </div>

@@ -16,7 +16,8 @@
     }
 
     h4 {
-        color: black;
+        color: #333333;
+        text-decoration: underline var(--action-color) 2px;
         text-align: center;
         padding: 1rem;
     }
@@ -32,7 +33,9 @@
     }
 
     .active {
-        background: linear-gradient(35deg, #494949, #313131);
+        /* background: #ff847c; */
+        background: var(--action-color);
+        /* background: linear-gradient(35deg, #494949, #313131); */
         color: white;
     }
 
@@ -44,13 +47,17 @@
         font-size: 1.2rem;
         line-height: 2.5rem;
     }
+
+    img {
+        border-radius: 2rem;
+    }
 }
 
 button {
     padding: 1rem 2rem;
     color: #313131;
     background: white;
-    border: 2px solid black;
+    border: 2px solid var(--action-color);
     margin-right: 2rem;
     font-weight: 600;
 }
@@ -63,9 +70,9 @@ h3.center {
     text-align: center;
     font-size: 2.5rem;
     padding-bottom: 0.5rem;
-    /* color: #e94057; */
-    background: linear-gradient(to right, #f27121, #e94057);
+    color: var(--text-color);
+    /* background: linear-gradient(to right, #f27121, #e94057);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
     font-weight: 900;
 }
