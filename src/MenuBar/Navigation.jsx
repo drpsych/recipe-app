@@ -3,6 +3,7 @@ import "./navigation.css";
 import { GiKnifeFork } from "react-icons/gi";
 import { Link, NavLink } from "react-router-dom";
 import { Nav } from "react-bootstrap";
+import Search from "../components/Search";
 
 function Navigation() {
     return (
@@ -10,7 +11,7 @@ function Navigation() {
             <div className="navBox">
                 <GiKnifeFork />
                 <Link className="logo" to={"/"}>
-                    whats for dinner?
+                    what's for dinner?
                 </Link>
                 <div className="menu">
                     <Nav.Link className="nav-link" href="/">
@@ -50,6 +51,9 @@ function Navigation() {
                             </NavLink>
                         </div>
                     </div>
+                    {/* <div className="search">
+                        <Search />
+                    </div> */}
                 </div>
             </div>
         </div>

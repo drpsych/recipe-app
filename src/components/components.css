@@ -131,6 +131,9 @@ form.search {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    /* position: fixed;
+    width: 100%;
+    top: 0px; */
 
     svg {
         font-size: 2rem;
