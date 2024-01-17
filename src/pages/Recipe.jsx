@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Recipe() {
     let params = useParams();
@@ -21,9 +22,15 @@ function Recipe() {
 
     return (
         <div className="detailWrapper">
-            <div>
+            <div className="img-summary">
                 <h2>{details.title}</h2>
                 <img src={details.image} alt={details.title} />
+                <p
+                    className="summary"
+                    dangerouslySetInnerHTML={{
+                        __html: details.summary,
+                    }}
+                ></p>
             </div>
             <div className="info">
                 <button
@@ -38,19 +45,27 @@ function Recipe() {
                 >
                     Ingredients
                 </button>
+                {/* <button
+                    className={activeTab === "ingredients" ? "active" : ""}
+                    onClick={() => setActiveTab("ingredients")}
+                >
+                    <NavLink to={"recipe/nutritionLabel/" + details.id}>
+                        Nutrition
+                    </NavLink>
+                </button> */}
                 {activeTab === "instructions" && (
                     <div>
-                        <h3
+                        {/* <h3
                             dangerouslySetInnerHTML={{
                                 __html: details.summary,
                             }}
-                        ></h3>
-                        <h2>Instructions</h2>
-                        <h3
+                        ></h3> */}
+                        <h3>Instructions</h3>
+                        <p
                             dangerouslySetInnerHTML={{
                                 __html: details.instructions,
                             }}
-                        ></h3>
+                        ></p>
                     </div>
                 )}
                 {activeTab === "ingredients" && (

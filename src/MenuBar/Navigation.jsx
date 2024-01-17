@@ -1,24 +1,22 @@
 import React from "react";
-// import "./navigation.css";
+import "./navigation.css";
 import { GiKnifeFork } from "react-icons/gi";
 import { Link, NavLink } from "react-router-dom";
-import { Nav } from "react-bootstrap";
+// import { Nav } from "react-bootstrap";
 import Search from "../components/Search";
-import Logo from "../components/Logo";
 
 function Navigation() {
     return (
         <div>
             <div className="navBox">
-                {/* <GiKnifeFork />
+                <GiKnifeFork />
                 <Link className="logo" to={"/"}>
                     what's for dinner?
-                </Link> */}
-                <Logo />
+                </Link>
                 <div className="menu">
-                    <Nav.Link className="nav-link" href="/">
+                    <NavLink className="nav-link" to="/">
                         Home
-                    </Nav.Link>
+                    </NavLink>
                     <div className="dropdown">
                         <button className="dropbtn">
                             Cuisine <i class="fa fa-caret-down"></i>
@@ -51,6 +49,22 @@ function Navigation() {
                             <NavLink to={"diet/Gluten Free"}>
                                 Gluten Free
                             </NavLink>
+                        </div>
+                    </div>
+                    <div className="dropdown">
+                        <button className="dropbtn">
+                            Type <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div className="dropdown-content">
+                            <NavLink to={"type/Appetizer"}>Appetizer</NavLink>
+                            <NavLink to={"type/Breakfast"}>Breakfast</NavLink>
+                            <NavLink to={"type/Dessert"}>Dessert</NavLink>
+                            <NavLink to={"type/Drink"}>Drink</NavLink>
+                            <NavLink to={"type/Salad"}>Salad</NavLink>
+                            <NavLink to={"type/Sauce"}>Sauce</NavLink>
+                            <NavLink to={"type/Side Dish"}>Side Dish</NavLink>
+                            <NavLink to={"type/Snack"}>Snack</NavLink>
+                            <NavLink to={"type/Soup"}>Soup</NavLink>
                         </div>
                     </div>
                     {/* <div className="search">

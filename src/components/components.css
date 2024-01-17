@@ -142,3 +142,25 @@ form.search {
         color: var(--white);
     }
 }
+
+/* font image */
+.logo {
+    background: var(--secondary-color);
+    /* margin: 0% -6%;
+    padding: 1% 5%; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    svg {
+        font-size: 2rem;
+        color: var(--white);
+    }
+    .name {
+        text-decoration: none;
+        color: var(--white);
+        font-size: 1.5rem;
+        font-weight: 400;
+        font-family: "Lobster Two", cursive;
+    }
+}
