@@ -7,7 +7,7 @@ function Searched() {
 
     const getSearched = async (name) => {
         const data = await fetch(
-            `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=${name}&number=25`
+            `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=${name}&number=${process.env.REACT_APP_RESULT_NUMBER}`
         );
         const recipes = await data.json();
         setSearchedRecipes(recipes.results);
@@ -19,23 +19,19 @@ function Searched() {
     }, [params.search]);
 
     return (
-        <div
-            className="grid"
-            animate={{ opacity: 1 }}
-            initial={{ opacity: 0 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-        >
-            {searchedRecipes.map((item) => {
-                return (
-                    <div className="recipe-card" key={item.id}>
-                        <Link to={`/recipe/${item.id}`}>
-                            <img src={item.image} alt={item.title} />
-                            <h4>{item.title}</h4>
-                        </Link>
-                    </div>
-                );
-            })}
+        <div className="page">
+            <div className="grid">
+                {searchedRecipes.map((item) => {
+                    return (
+                        <div className="recipe-card" key={item.id}>
+                            <Link to={`/recipe/${item.id}`}>
+                                <img src={item.image} alt={item.title} />
+                                <h4>{item.title}</h4>
+                            </Link>
+                        </div>
+                    );
+                })}
+            </div>
         </div>
     );
 }

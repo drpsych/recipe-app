@@ -1,21 +1,24 @@
 import Category from "./components/Category";
 import Search from "./components/Search";
 import Pages from "./pages/Pages";
-import { BrowserRouter, Link } from "react-router-dom";
+import { Link, BrowserRouter } from "react-router-dom";
 import { GiKnifeFork } from "react-icons/gi";
+import Navigation from "./MenuBar/Navigation";
 
 function App() {
     return (
         <div className="App">
             <BrowserRouter>
-                <div className="nav">
+                {/* <div className="navBox">
                     <GiKnifeFork />
                     <Link className="logo" to={"/"}>
-                        delicious
+                        what's for dinner?
                     </Link>
-                </div>
+                    <Navigation />
+                </div> */}
+                <Navigation />
                 <Search />
-                <Category />
+                {/* <Category /> */}
                 <Pages />
             </BrowserRouter>
         </div>

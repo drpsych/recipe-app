@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Recipe() {
     let params = useParams();
@@ -20,16 +21,16 @@ function Recipe() {
     }, [params.name]);
 
     return (
-        <div
-            className="detailWrapper"
-            animate={{ opacity: 1 }}
-            initial={{ opacity: 0 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-        >
-            <div>
+        <div className="detailWrapper">
+            <div className="img-summary">
                 <h2>{details.title}</h2>
                 <img src={details.image} alt={details.title} />
+                <p
+                    className="summary"
+                    dangerouslySetInnerHTML={{
+                        __html: details.summary,
+                    }}
+                ></p>
             </div>
             <div className="info">
                 <button
@@ -44,26 +45,40 @@ function Recipe() {
                 >
                     Ingredients
                 </button>
+                {/* <button
+                    className={activeTab === "ingredients" ? "active" : ""}
+                    onClick={() => setActiveTab("ingredients")}
+                >
+                    <NavLink to={"recipe/nutritionLabel/" + details.id}>
+                        Nutrition
+                    </NavLink>
+                </button> */}
                 {activeTab === "instructions" && (
                     <div>
-                        <h3
+                        {/* <h3
                             dangerouslySetInnerHTML={{
                                 __html: details.summary,
                             }}
-                        ></h3>
-                        <h3
+                        ></h3> */}
+                        <h3>Instructions</h3>
+                        <p
                             dangerouslySetInnerHTML={{
                                 __html: details.instructions,
                             }}
-                        ></h3>
+                        ></p>
                     </div>
                 )}
                 {activeTab === "ingredients" && (
-                    <ul>
-                        {details.extendedIngredients.map((ingredient) => (
-                            <li key={ingredient.id}>{ingredient.original}</li>
-                        ))}
-                    </ul>
+                    <div>
+                        <h3>Ingredients</h3>
+                        <ul>
+                            {details.extendedIngredients.map((ingredient) => (
+                                <li key={ingredient.id}>
+                                    {ingredient.original}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 )}
             </div>
         </div>

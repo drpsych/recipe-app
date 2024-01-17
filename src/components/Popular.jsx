@@ -19,7 +19,7 @@ function Popular() {
             setPopular(JSON.parse(check));
         } else {
             const api = await fetch(
-                `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=8`
+                `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`
             );
             const data = await api.json();
 
@@ -35,8 +35,8 @@ function Popular() {
             <h3>Inspirational Picks</h3>
             <Splide
                 options={{
-                    perPage: 4,
-                    arrows: false,
+                    perPage: 3,
+                    arrows: true,
                     pagination: true,
                     drag: "free",
                     gap: "5rem",
@@ -59,6 +59,9 @@ function Popular() {
                     );
                 })}
             </Splide>
+            <Link to={`/inspiration`} className="text-link center">
+                <h3>Get Inspired!</h3>
+            </Link>
         </div>
     );
 }
