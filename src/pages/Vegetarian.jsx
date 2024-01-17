@@ -18,7 +18,7 @@ function Vegetarian() {
     };
 
     return (
-        <div>
+        <div className="page">
             <h3 className="center">Vegetarian Recipes</h3>
             <div className="grid">
                 {vegetarian.map((item) => {

@@ -19,17 +19,19 @@ function Searched() {
     }, [params.search]);
 
     return (
-        <div className="grid">
-            {searchedRecipes.map((item) => {
-                return (
-                    <div className="recipe-card" key={item.id}>
-                        <Link to={`/recipe/${item.id}`}>
-                            <img src={item.image} alt={item.title} />
-                            <h4>{item.title}</h4>
-                        </Link>
-                    </div>
-                );
-            })}
+        <div className="page">
+            <div className="grid">
+                {searchedRecipes.map((item) => {
+                    return (
+                        <div className="recipe-card" key={item.id}>
+                            <Link to={`/recipe/${item.id}`}>
+                                <img src={item.image} alt={item.title} />
+                                <h4>{item.title}</h4>
+                            </Link>
+                        </div>
+                    );
+                })}
+            </div>
         </div>
     );
 }

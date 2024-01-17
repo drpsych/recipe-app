@@ -35,7 +35,7 @@ function Popular() {
             <h3>Inspirational Picks</h3>
             <Splide
                 options={{
-                    perPage: 2,
+                    perPage: 3,
                     arrows: true,
                     pagination: true,
                     drag: "free",

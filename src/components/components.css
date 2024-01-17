@@ -1,92 +1,111 @@
+/* Home page, inspirational, and veggie picks for splide carousel */
 .wrapper {
     margin: 4rem 0rem;
+
     h3 {
         color: var(--text-color);
+        font-size: 1.5rem;
+        margin: 1.5rem 0rem;
     }
-}
 
-.card {
-    min-height: 25rem;
-    border-radius: 2rem;
-    overflow: hidden;
-    position: relative;
-
-    img {
+    .card {
+        min-height: 25rem;
         border-radius: 2rem;
+        overflow: hidden;
+        position: relative;
+
+        img {
+            border-radius: 2rem;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        p {
+            position: absolute;
+            z-index: 10;
+            left: 50%;
+            bottom: 0%;
+            transform: translate(-50%, 0%);
+            color: var(--white);
+            width: 100%;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1rem;
+            height: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .gradient {
+        z-index: 3;
         position: absolute;
-        left: 0;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
     }
 
-    p {
-        position: absolute;
-        z-index: 10;
-        left: 50%;
-        bottom: 0%;
-        transform: translate(-50%, 0%);
-        color: var(--white);
-        width: 100%;
+    .text-link {
+        text-decoration: none;
+
+        h3 {
+            color: var(--action-color);
+            font-size: 1.5rem;
+            margin: 1rem 0rem;
+        }
+    }
+
+    .center {
         text-align: center;
-        font-weight: 600;
-        font-size: 1rem;
-        height: 40%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 }
 
-.gradient {
-    z-index: 3;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-}
-
+/* Style for Category buttons, turned off. Moved to navbar. */
 .list {
     display: flex;
     justify-content: center;
     margin: 2rem 0rem;
-}
+    .cat-link {
+        display: flex;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        margin-right: 2rem;
+        text-decoration: none;
+        background: linear-gradient(35deg, #494949, #313131);
+        width: 6rem;
+        height: 6rem;
+        cursor: pointer;
+        transform: scale(0.8);
 
-.cat-link {
-    display: flex;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    margin-right: 2rem;
-    text-decoration: none;
-    background: linear-gradient(35deg, #494949, #313131);
-    width: 6rem;
-    height: 6rem;
-    cursor: pointer;
-    transform: scale(0.8);
-
-    h4 {
-        color: var(--white);
-        font-size: 0.8rem;
-    }
-    svg {
-        color: var(--white);
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
-    }
-
-    &.active {
-        background: linear-gradient(to right, #f27121, #e94057);
-
-        svg,
         h4 {
             color: var(--white);
+            font-size: 0.8rem;
+        }
+        svg {
+            color: var(--white);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        &.active {
+            background: linear-gradient(to right, #f27121, #e94057);
+
+            svg,
+            h4 {
+                color: var(--white);
+            }
         }
     }
 }
 
+/* Search box, form... */
 form.search {
     margin: 2rem 20rem;
 
@@ -122,48 +141,4 @@ form.search {
         transform: translate(100%, -50%);
         color: var(--white);
     }
-}
-
-.navBox {
-    background: var(--secondary-color);
-    margin: 0% -6%;
-    padding: 1rem 2.5rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    /* position: fixed;
-    width: 100%;
-    top: 0px; */
-
-    svg {
-        font-size: 2rem;
-        color: var(--white);
-    }
-
-    .logo {
-        text-decoration: none;
-        color: var(--white);
-        font-size: 1.5rem;
-        font-weight: 400;
-        font-family: "Lobster Two", cursive;
-    }
-
-    .menu {
-        margin-left: 2rem;
-    }
-}
-
-.text-link {
-    text-decoration: none;
-
-    h3 {
-        color: var(--action-color);
-        /* background: linear-gradient(to right, #f27121, #e94057);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent; */
-    }
-}
-
-.center {
-    text-align: center;
 }

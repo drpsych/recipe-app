@@ -24,7 +24,7 @@ function Cuisine() {
     }, [params.type]);
 
     return (
-        <div>
+        <div className="page">
             <h3 className="center">{title} Recipes</h3>
             <div className="grid">
                 {cuisine.map((item) => {

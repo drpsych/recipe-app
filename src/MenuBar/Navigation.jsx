@@ -1,18 +1,20 @@
 import React from "react";
-import "./navigation.css";
+// import "./navigation.css";
 import { GiKnifeFork } from "react-icons/gi";
 import { Link, NavLink } from "react-router-dom";
 import { Nav } from "react-bootstrap";
 import Search from "../components/Search";
+import Logo from "../components/Logo";
 
 function Navigation() {
     return (
         <div>
             <div className="navBox">
-                <GiKnifeFork />
+                {/* <GiKnifeFork />
                 <Link className="logo" to={"/"}>
                     what's for dinner?
-                </Link>
+                </Link> */}
+                <Logo />
                 <div className="menu">
                     <Nav.Link className="nav-link" href="/">
                         Home

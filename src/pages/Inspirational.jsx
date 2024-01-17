@@ -18,7 +18,7 @@ function Inspirational() {
     };
 
     return (
-        <div>
+        <div className="page">
             <h3 className="center">Inspirational Recipes</h3>
             <div className="grid">
                 {inspirational.map((item) => {

@@ -1,28 +1,43 @@
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    grid-gap: 3rem;
-}
+/* Page grid of recipes */
+.page {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        grid-gap: 3rem;
+    }
 
-.recipe-card {
-    width: 100%;
-    img {
+    .recipe-card {
         width: 100%;
-        border-radius: 2rem;
+        img {
+            width: 100%;
+            border-radius: 2rem;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h4 {
+            color: #333333;
+            text-decoration: underline var(--action-color) 2px;
+            text-align: center;
+            padding: 1rem;
+        }
     }
 
-    a {
-        text-decoration: none;
-    }
-
-    h4 {
-        color: #333333;
-        text-decoration: underline var(--action-color) 2px;
+    .center {
         text-align: center;
-        padding: 1rem;
+        font-size: 2.5rem;
+        padding-bottom: 0.5rem;
+        color: var(--text-color);
+        /* background: linear-gradient(to right, #f27121, #e94057);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; */
+        font-weight: 900;
     }
 }
 
+/* Recipe page with details. */
 .detailWrapper {
     margin-top: 10rem;
     margin-bottom: 5rem;
@@ -33,9 +48,7 @@
     }
 
     .active {
-        /* background: #ff847c; */
         background: var(--action-color);
-        /* background: linear-gradient(35deg, #494949, #313131); */
         color: white;
     }
 
@@ -51,28 +64,17 @@
     img {
         border-radius: 2rem;
     }
-}
 
-button {
-    padding: 1rem 2rem;
-    color: #313131;
-    background: white;
-    border: 2px solid var(--action-color);
-    margin-right: 2rem;
-    font-weight: 600;
-}
+    button {
+        padding: 1rem 2rem;
+        color: #313131;
+        background: white;
+        border: 2px solid var(--action-color);
+        margin-right: 2rem;
+        font-weight: 600;
+    }
 
-.info {
-    margin-left: 10rem;
-}
-
-h3.center {
-    text-align: center;
-    font-size: 2.5rem;
-    padding-bottom: 0.5rem;
-    color: var(--text-color);
-    /* background: linear-gradient(to right, #f27121, #e94057);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
-    font-weight: 900;
+    .info {
+        margin-left: 10rem;
+    }
 }
