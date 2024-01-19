@@ -2,8 +2,6 @@ import React from "react";
 import "./navigation.css";
 import { GiKnifeFork } from "react-icons/gi";
 import { Link, NavLink } from "react-router-dom";
-// import { Nav } from "react-bootstrap";
-import Search from "../components/Search";
 
 function Navigation() {
     return (
@@ -67,9 +65,6 @@ function Navigation() {
                             <NavLink to={"type/Soup"}>Soup</NavLink>
                         </div>
                     </div>
-                    {/* <div className="search">
-                        <Search />
-                    </div> */}
                 </div>
             </div>
         </div>

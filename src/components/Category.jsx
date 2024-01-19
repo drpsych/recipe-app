@@ -1,10 +1,5 @@
 import { FaHamburger, FaHome, FaPizzaSlice } from "react-icons/fa";
-import {
-    GiTacos,
-    GiChopsticks,
-    GiGreekSphinx,
-    GiIndianPalace,
-} from "react-icons/gi";
+import { GiTacos, GiChopsticks, GiIndianPalace } from "react-icons/gi";
 import { NavLink } from "react-router-dom";
 
 function Category() {

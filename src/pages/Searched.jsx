@@ -11,7 +11,7 @@ function Searched() {
         );
         const recipes = await data.json();
         setSearchedRecipes(recipes.results);
-        console.log(recipes.results);
+        // console.log(recipes.results);
     };
 
     useEffect(() => {

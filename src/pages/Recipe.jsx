@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Link, NavLink } from "react-router-dom";
 
 function Recipe() {
     let params = useParams();
@@ -13,7 +12,7 @@ function Recipe() {
         );
         const dataDetail = await data.json();
         setDetails(dataDetail);
-        console.log(dataDetail);
+        // console.log(dataDetail);
     };
 
     useEffect(() => {
@@ -45,14 +44,6 @@ function Recipe() {
                 >
                     Ingredients
                 </button>
-                {/* <button
-                    className={activeTab === "ingredients" ? "active" : ""}
-                    onClick={() => setActiveTab("ingredients")}
-                >
-                    <NavLink to={"recipe/nutritionLabel/" + details.id}>
-                        Nutrition
-                    </NavLink>
-                </button> */}
                 {activeTab === "instructions" && (
                     <div>
                         {/* <h3

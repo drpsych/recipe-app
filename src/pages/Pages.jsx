@@ -8,7 +8,6 @@ import Inspirational from "./Inspirational";
 import Vegetarian from "./Vegetarian";
 import Diet from "./Diet";
 import Type from "./Type";
-import Nutrition from "../components/Nutrition";
 
 function Pages() {
     const location = useLocation();
@@ -22,10 +21,6 @@ function Pages() {
             <Route path="/vegetarian" element={<Vegetarian />} />
             <Route path="/diet/:type" element={<Diet />} />
             <Route path="/type/:type" element={<Type />} />
-            <Route
-                path="/recipe/nutritionLabel/:type"
-                element={<Nutrition />}
-            />
         </Routes>
     );
 }
