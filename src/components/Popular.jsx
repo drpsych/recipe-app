@@ -26,7 +26,7 @@ function Popular() {
             // setting array in local storage as a "STRING"
             localStorage.setItem("popular", JSON.stringify(data.recipes));
             setPopular(data.recipes);
-            console.log(data.recipes);
+            // console.log(data.recipes);
         }
     };
 

@@ -14,12 +14,12 @@ function Diet() {
         );
         const recipes = await data.json();
         setDiet(recipes.results);
-        console.log(recipes.results);
+        // console.log(recipes.results);
         setTitle(name);
     };
     useEffect(() => {
         getDiet(params.type);
-        console.log(params.type);
+        // console.log(params.type);
     }, [params.type]);
 
     return (

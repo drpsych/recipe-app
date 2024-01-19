@@ -26,7 +26,7 @@ function Veggie() {
             // setting array in local storage as a "STRING"
             localStorage.setItem("veggie", JSON.stringify(data.recipes));
             setVeggie(data.recipes);
-            console.log(data.recipes);
+            // console.log(data.recipes);
         }
     };
 

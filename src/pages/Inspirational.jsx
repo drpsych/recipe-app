@@ -14,7 +14,7 @@ function Inspirational() {
         );
         const data = await api.json();
         setInspirational(data.recipes);
-        console.log(data.recipes);
+        // console.log(data.recipes);
     };
 
     return (

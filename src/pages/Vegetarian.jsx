@@ -14,7 +14,7 @@ function Vegetarian() {
         );
         const data = await api.json();
         setVegetarian(data.recipes);
-        console.log(data.recipes);
+        // console.log(data.recipes);
     };
 
     return (

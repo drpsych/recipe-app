@@ -11,12 +11,12 @@ function Type() {
         );
         const recipes = await data.json();
         setType(recipes.results);
-        console.log(recipes.results);
+        // console.log(recipes.results);
         setTitle(name);
     };
     useEffect(() => {
         getDiet(params.type);
-        console.log(params.type);
+        // console.log(params.type);
     }, [params.type]);
 
     return (

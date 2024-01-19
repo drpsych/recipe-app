@@ -14,12 +14,12 @@ function Cuisine() {
         );
         const recipes = await data.json();
         setCuisine(recipes.results);
-        console.log(recipes.results);
+        // console.log(recipes.results);
     };
 
     useEffect(() => {
         getCuisine(params.type);
-        console.log(params.type);
+        // console.log(params.type);
         setTitle(params.type);
     }, [params.type]);
 
