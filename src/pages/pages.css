@@ -87,6 +87,10 @@
     .info {
         width: 45%;
         margin-left: 5rem;
+
+        .btn {
+            text-align: center;
+        }
     }
 
     h3 {

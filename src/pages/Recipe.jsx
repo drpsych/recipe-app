@@ -32,18 +32,20 @@ function Recipe() {
                 ></p>
             </div>
             <div className="info">
-                <button
-                    className={activeTab === "instructions" ? "active" : ""}
-                    onClick={() => setActiveTab("instructions")}
-                >
-                    Instructions
-                </button>
-                <button
-                    className={activeTab === "ingredients" ? "active" : ""}
-                    onClick={() => setActiveTab("ingredients")}
-                >
-                    Ingredients
-                </button>
+                <div className="btn">
+                    <button
+                        className={activeTab === "instructions" ? "active" : ""}
+                        onClick={() => setActiveTab("instructions")}
+                    >
+                        Instructions
+                    </button>
+                    <button
+                        className={activeTab === "ingredients" ? "active" : ""}
+                        onClick={() => setActiveTab("ingredients")}
+                    >
+                        Ingredients
+                    </button>
+                </div>
                 {activeTab === "instructions" && (
                     <div>
                         {/* <h3
