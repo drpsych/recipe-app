@@ -34,6 +34,10 @@
         color: var(--text-color);
         font-weight: 900;
     }
+
+    .no-results {
+        text-align: center;
+    }
 }
 
 /* Recipe page with details. */

@@ -20,6 +20,13 @@ function Searched() {
 
     return (
         <div className="page">
+            {searchedRecipes.length === 0 && (
+                <div className="no-results">
+                    <h3>No results found.</h3>
+                    <p>Try searching for a different recipe.</p>
+                </div>
+            )}
+            {searchedRecipes.length > 0}
             <div className="grid">
                 {searchedRecipes.map((item) => {
                     return (
