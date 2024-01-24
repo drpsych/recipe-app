@@ -35,7 +35,9 @@
         }
 
         h4:hover {
-            text-shadow: 0px 0px 20px var(--accent-color);
+            /* transform: scale(2.05); */
+            text-shadow: 0px 0px 10px var(--accent-color-bright);
+            transition: all 150ms ease-in-out 0s;
         }
 
         .no-results {
