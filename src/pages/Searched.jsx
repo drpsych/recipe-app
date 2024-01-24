@@ -17,22 +17,29 @@ function Searched() {
 
     useEffect(() => {
         getSearched(params.search);
+        // console.log(params.search);
     }, [params.search]);
 
     return (
         <div className="page">
             {searchedRecipes.length > 0 && (
-                <div className="grid">
-                    {searchedRecipes.map((item) => {
-                        return (
-                            <div className="recipe-card" key={item.id}>
-                                <Link to={`/recipe/${item.id}`}>
-                                    <img src={item.image} alt={item.title} />
-                                    <h4>{item.title}</h4>
-                                </Link>
-                            </div>
-                        );
-                    })}
+                <div>
+                    <h3 className="center">Recipes with {params.search}</h3>
+                    <div className="grid">
+                        {searchedRecipes.map((item) => {
+                            return (
+                                <div className="recipe-card" key={item.id}>
+                                    <Link to={`/recipe/${item.id}`}>
+                                        <img
+                                            src={item.image}
+                                            alt={item.title}
+                                        />
+                                        <h4>{item.title}</h4>
+                                    </Link>
+                                </div>
+                            );
+                        })}
+                    </div>
                 </div>
             )}
             {searchedRecipes.length === 0 && (
