@@ -1,11 +1,13 @@
 :root {
-    --primary-color: #f2f2f2;
-    --secondary-color: hsl(0, 0%, 20%);
-    --secondary-color2: hsl(0, 0%, 35%);
+    --primary-color: #ff9f1c;
+    --secondary-color: #ffbf69;
+    --accent-color: #2ec4b6;
+    --background-color: #ffffff;
+    --text-color: #090707;
+    --shadow: rgba(0, 0, 0, 0.543);
+    --shadow2: rgba(0, 0, 0, 0.625);
     --action-color: hsl(48, 100%, 50%);
     --action-color2: hsl(48, 80%, 50%);
-    --text-color: #4f4f4f;
-    --dark-text-color: black;
     --white: white;
 }
 
@@ -24,7 +26,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
 
     margin: 0% 5%;
-    background: var(--primary-color);
+    background: var(--background-color);
 }
 
 code {

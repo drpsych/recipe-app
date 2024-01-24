@@ -59,9 +59,16 @@ function Veggie() {
                     );
                 })}
             </Splide>
-            <Link to={`/vegetarian`} className="text-link center">
+            <div className="btn-wrapper">
+                <button className="btn">
+                    <Link to={`/vegetarian`} className="text-link">
+                        Get Inspired!
+                    </Link>
+                </button>
+            </div>
+            {/* <Link to={`/vegetarian`} className="text-link center">
                 <h3>View More Vegetarian Options</h3>
-            </Link>
+            </Link> */}
         </div>
     );
 }
