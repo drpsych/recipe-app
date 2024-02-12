@@ -32,7 +32,7 @@ function Cuisine() {
                         <div className="recipe-card" key={item.id}>
                             <Link to={`/recipe/${item.id}`}>
                                 <img src={item.image} alt={item.title} />
-                                <h4>{item.title}</h4>
+                                <h4 className="shadow">{item.title}</h4>
                             </Link>
                         </div>
                     );

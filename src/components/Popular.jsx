@@ -59,9 +59,13 @@ function Popular() {
                     );
                 })}
             </Splide>
-            <Link to={`/inspiration`} className="text-link center">
-                <h3>Get Inspired!</h3>
-            </Link>
+            <div className="btn-wrapper">
+                <button className="btn">
+                    <Link to={`/inspiration`} className="text-link">
+                        Get Inspired!
+                    </Link>
+                </button>
+            </div>
         </div>
     );
 }

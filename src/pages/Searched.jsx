@@ -12,26 +12,42 @@ function Searched() {
         const recipes = await data.json();
         setSearchedRecipes(recipes.results);
         // console.log(recipes.results);
+        // console.log(searchedRecipes);
     };
 
     useEffect(() => {
         getSearched(params.search);
+        // console.log(params.search);
     }, [params.search]);
 
     return (
         <div className="page">
-            <div className="grid">
-                {searchedRecipes.map((item) => {
-                    return (
-                        <div className="recipe-card" key={item.id}>
-                            <Link to={`/recipe/${item.id}`}>
-                                <img src={item.image} alt={item.title} />
-                                <h4>{item.title}</h4>
-                            </Link>
-                        </div>
-                    );
-                })}
-            </div>
+            {searchedRecipes.length > 0 && (
+                <div>
+                    <h3 className="center">Recipes with {params.search}</h3>
+                    <div className="grid">
+                        {searchedRecipes.map((item) => {
+                            return (
+                                <div className="recipe-card" key={item.id}>
+                                    <Link to={`/recipe/${item.id}`}>
+                                        <img
+                                            src={item.image}
+                                            alt={item.title}
+                                        />
+                                        <h4>{item.title}</h4>
+                                    </Link>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+            )}
+            {searchedRecipes.length === 0 && (
+                <div className="no-results">
+                    <h3>No results found.</h3>
+                    <p>Try searching for a different recipe.</p>
+                </div>
+            )}
         </div>
     );
 }
