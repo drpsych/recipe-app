@@ -63,7 +63,8 @@
     /* Add an (action color) background color to navbar links on hover */
     .menu a:hover,
     .dropdown:hover .dropbtn {
-        background-color: var(--accent-color);
+        text-decoration: underline var(--accent-color) 0.33rem;
+        /* background-color: var(--accent-color); */
         color: var(--text-color);
     }
 
