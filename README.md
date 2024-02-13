@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
-what's for dinner? is a frontend applicaiton built with REACT JS. It was build utilizing an API from Spoonacular to allow users to search for recipes.
+what's for dinner? is a frontend applicaiton built with REACT JS. It was build utilizing an API from Spoonacular to allow users to search for recipes. Application will need API key from Spoonacular to work, see [API Key](#api-key) below for instructions.
 
 ## Table of Contents
 - [Recipe-App](#recipe-app)
