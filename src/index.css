@@ -7,6 +7,8 @@
     --text-color: #090707;
     --shadow: rgba(0, 0, 0, 0.543);
     --shadow2: rgba(0, 0, 0, 0.625);
+    --action-color: hsl(48, 100%, 50%);
+    --action-color2: hsl(48, 80%, 50%);
     --white: white;
 }
 

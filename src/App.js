@@ -4,8 +4,6 @@ import { BrowserRouter } from "react-router-dom";
 import Navigation from "./components/MenuBar/Navigation";
 
 function App() {
-    const pageResults = 75;
-
     return (
         <div className="App">
             <BrowserRouter>

@@ -53,9 +53,7 @@
         margin: 1rem 0rem;
 
         .btn {
-            width: 268px;
             display: flex;
-            justify-content: center;
             margin: auto;
             outline: 0;
             cursor: pointer;
@@ -71,7 +69,6 @@
                 box-shadow 0.2s ease;
 
             .text-link {
-                text-align: center;
                 text-decoration: none;
                 color: var(--white);
             }
@@ -130,17 +127,11 @@
 
 /* Search box, form... */
 form.search {
-    margin: 2rem 5%;
-
-    .center-bar {
-        margin: auto;
-    }
+    margin: 2rem 20rem;
 
     div {
-        text-align: center;
         position: relative;
-        min-width: 350px;
-        max-width: 550px;
+        width: 100%;
     }
 
     input {

@@ -3,38 +3,29 @@ import "./components.css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { Link } from "react-router-dom";
-import { homePageResults } from "../config";
 
-/**
- * RandomRecipe component fetches and displays random recipes.
- * - Fetches random recipes from API on mount.
- * - Stores recipes in localStorage to avoid duplicate API requests.
- * - Displays recipes in a responsive carousel using Splide.
- * - Provides a link to recipes detail page.
- * - Provides a link to inspiration page.
- */
-function RandomRecipe() {
-    const [random, setRandom] = useState([]);
+function Popular() {
+    const [popular, setPopular] = useState([]);
 
     useEffect(() => {
-        getRandom();
+        getPopular();
     }, []);
 
-    const getRandom = async () => {
-        const check = localStorage.getItem("random");
+    const getPopular = async () => {
+        const check = localStorage.getItem("popular");
 
         if (check) {
             // turning a "STRING" back into an array
-            setRandom(JSON.parse(check));
+            setPopular(JSON.parse(check));
         } else {
             const api = await fetch(
-                `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=${homePageResults}`
+                `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`
             );
             const data = await api.json();
 
             // setting array in local storage as a "STRING"
-            localStorage.setItem("random", JSON.stringify(data.recipes));
-            setRandom(data.recipes);
+            localStorage.setItem("popular", JSON.stringify(data.recipes));
+            setPopular(data.recipes);
             // console.log(data.recipes);
         }
     };
@@ -51,7 +42,7 @@ function RandomRecipe() {
                     gap: "5rem",
                 }}
             >
-                {random.map((recipe) => {
+                {popular.map((recipe) => {
                     return (
                         <SplideSlide key={recipe.id}>
                             <div className="card">
@@ -79,4 +70,4 @@ function RandomRecipe() {
     );
 }
 
-export default RandomRecipe;
+export default Popular;

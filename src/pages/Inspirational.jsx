@@ -1,17 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { numberOfResults } from "../config";
 
-/**
- * Fetches random inspirational recipes from the Spoonacular API
- * and renders them to the page.
- *
- * Uses React hooks for state management and side effects:
- * - useState for inspirational recipe state
- * - useEffect to fetch recipes on initial render
- *
- * Renders a grid of recipe cards linking to recipe detail pages.
- */
 function Inspirational() {
     const [inspirational, setInspirational] = useState([]);
 
@@ -21,7 +10,7 @@ function Inspirational() {
 
     const getInspirational = async () => {
         const api = await fetch(
-            `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&&number=${numberOfResults}`
+            `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&&number=${process.env.REACT_APP_RESULT_NUMBER}`
         );
         const data = await api.json();
         setInspirational(data.recipes);

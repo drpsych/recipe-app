@@ -9,12 +9,6 @@ import Vegetarian from "./Vegetarian";
 import Diet from "./Diet";
 import Type from "./Type";
 
-/**
- * Renders the routes and page components for the application.
- * Uses React Router v6 Routes and Route components to define routes and map URL paths to page components.
- * Location state is accessed via useLocation hook and passed to Routes component.
- * Route components render different page components based on URL path.
- */
 function Pages() {
     const location = useLocation();
     return (
