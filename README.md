@@ -1,93 +1,70 @@
-# Recipe-App
+# Getting Started with Create React App
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Description
-what's for dinner? is a frontend applicaiton built with REACT JS. It was build utilizing an API from Spoonacular to allow users to search for recipes.
+## Available Scripts
 
-## Table of Contents
-- [Recipe-App](#recipe-app)
-  - [Description](#description)
-  - [Table of Contents](#table-of-contents)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [API Key](#api-key)
-  - [Contributing](#contributing)
-  - [License](#license)
+In the project directory, you can run:
 
-## Installation
-To install what's for dinner?:
+### `npm start`
 
-1. Clone the repository:
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-```
-git clone https://github.com/drpsych/recipe-app.git
-```
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-2. Navigate to the project directory:
+### `npm test`
 
-```
-cd recipe-app
-```
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-3. Install dependencies:
+### `npm run build`
 
-```
-npm install
-```
-## Usage
-Once the repository is cloned and dependencies are installed, run the following command to start the application.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-4. Start the development server:
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-```
-npm start
-```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-The app should now be running at http://localhost:3000.
+### `npm run eject`
 
-## API Key
-1. Navigate to Spoonacular website: https://spoonacular.com/food-api
-   
-   <img src="public/markdown-images/1.png" width="800">
-   
-2. Sign up for an account at Spoonacular, or sign in if account is already active.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-   <img src="public/markdown-images/2.png" width="800">
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-3. Navigate to "Profile" section and click on "Show/Hide API Key". 
-   
-   <img src="public/markdown-images/3.png" width="800">
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-4. Copy the API key and paste it into the .env file.
-   
-   1. Create a .env file in the root directory of the project.
-   
-   2. Add the following line to the .env file, replacing &lt;YOUR_API_KEY&gt; with your actual Spoonacular API key:
-       ```
-       REACT_APP_API_KEY=<YOUR_API_KEY>
-       ```
-      <img src="public/markdown-images/4.png" width="500">
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-5. If application is running with the ```npm start``` command, stop the application server by pressing CTRL+C in the terminal window. Altering a .env file requires the application to be restarted.
-   
-6. Restart the application server: ```npm start```
+## Learn More
 
-## Contributing
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-We welcome contributions to this project! Here are some ways you can help:
+To learn React, check out the [React documentation](https://reactjs.org/).
 
--   Report bugs and make feature requests by opening a GitHub issue. Be sure to include clear steps to reproduce the bug so we can fix it quickly.
+### Code Splitting
 
--   Submit pull requests to fix bugs or add new features. Make sure your PR has a clear description of the problem you're trying to solve or the feature you'd like to add.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
--   Improve documentation by submitting pull requests or opening issues for anything that's confusing or missing. Good documentation makes a project more welcoming to new contributors.
+### Analyzing the Bundle Size
 
--   Participate in code reviews when PRs are opened. Check for bugs, gaps in test coverage, or unnecessary complexity. Offer suggestions to improve the code while being respectful.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
--   Help answer questions from other users that come up in issues or discussions. Our community grows stronger when we share knowledge with others.
+### Making a Progressive Web App
 
-Thanks for making this project better for everyone!
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-## License
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
