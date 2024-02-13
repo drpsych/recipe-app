@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-
+import { numberOfResults } from "../config";
 import "./pages.css";
 
+/**
+ * Fetches diet recipes from Spoonacular API based on route param
+ * and displays them on the page.
+ *
+ * Uses React hooks for state and effects.
+ */
 function Diet() {
     const [diet, setDiet] = useState([]);
     const [title, setTitle] = useState("");
@@ -10,7 +16,7 @@ function Diet() {
 
     const getDiet = async (name) => {
         const data = await fetch(
-            `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&diet=${name}&number=${process.env.REACT_APP_RESULT_NUMBER}`
+            `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&diet=${name}&number=${numberOfResults}`
         );
         const recipes = await data.json();
         setDiet(recipes.results);

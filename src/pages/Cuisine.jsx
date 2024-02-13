@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-
+import { numberOfResults } from "../config";
 import "./pages.css";
 
+/**
+ * Fetches and displays recipes for a specific cuisine.
+ *
+ * Uses the Spoonacular API to fetch recipes for the cuisine specified in the route params.
+ * Sets the page title to the cuisine name.
+ * Renders the recipes in a grid with links to the recipe detail page.
+ */
 function Cuisine() {
     const [cuisine, setCuisine] = useState([]);
     const [title, setTitle] = useState("");
@@ -10,7 +17,7 @@ function Cuisine() {
 
     const getCuisine = async (name) => {
         const data = await fetch(
-            `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}&number=${process.env.REACT_APP_RESULT_NUMBER}`
+            `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}&number=${numberOfResults}`
         );
         const recipes = await data.json();
         setCuisine(recipes.results);
