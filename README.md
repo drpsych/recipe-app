@@ -67,7 +67,7 @@ npm start
 The app should now be running at http://localhost:3000.
 
 ## API Key
-1. Navigate to Spoonacular website: https://spoonacular.com/food-api
+1. Navigate to [Spoonacular](https://spoonacular.com/food-api) website: 
    
    ![1](https://github.com/drpsych/recipe-app/assets/62787554/cd415ac9-673c-4059-b419-313502f10cf7)
    
