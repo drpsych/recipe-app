@@ -2,6 +2,15 @@ import { FaHamburger, FaHome, FaPizzaSlice } from "react-icons/fa";
 import { GiTacos, GiChopsticks, GiIndianPalace } from "react-icons/gi";
 import { NavLink } from "react-router-dom";
 
+// Depreciated!....... Replaced with Navigation component and menubar.
+
+/**
+ * Renders navigation links to different food category pages.
+ * Uses React Router NavLink to create links to routes
+ * for different food categories. Renders icon components
+ * from react-icons for visual representation of each
+ * category.
+ */
 function Category() {
     return (
         <div className="list">

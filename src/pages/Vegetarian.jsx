@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+/**
+ * Vegetarian page component.
+ *
+ * Fetches and displays random vegetarian recipes from Spoonacular API.
+ * Uses React hooks for state management.
+ */
 function Vegetarian() {
     const [vegetarian, setVegetarian] = useState([]);
 

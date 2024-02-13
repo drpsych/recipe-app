@@ -1,11 +1,11 @@
 import Veggie from "../components/Veggie";
-import Popular from "../components/Popular";
+import RandomRecipe from "../components/RandomRecipe";
 import React from "react";
 
 function Home() {
     return (
         <div>
-            <Popular></Popular>
+            <RandomRecipe></RandomRecipe>
             <Veggie></Veggie>
         </div>
     );

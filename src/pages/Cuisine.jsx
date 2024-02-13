@@ -3,6 +3,13 @@ import { useParams, Link } from "react-router-dom";
 
 import "./pages.css";
 
+/**
+ * Fetches and displays recipes for a specific cuisine.
+ *
+ * Uses the Spoonacular API to fetch recipes for the cuisine specified in the route params.
+ * Sets the page title to the cuisine name.
+ * Renders the recipes in a grid with links to the recipe detail page.
+ */
 function Cuisine() {
     const [cuisine, setCuisine] = useState([]);
     const [title, setTitle] = useState("");

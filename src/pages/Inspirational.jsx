@@ -1,6 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+/**
+ * Fetches random inspirational recipes from the Spoonacular API
+ * and renders them to the page.
+ *
+ * Uses React hooks for state management and side effects:
+ * - useState for inspirational recipe state
+ * - useEffect to fetch recipes on initial render
+ *
+ * Renders a grid of recipe cards linking to recipe detail pages.
+ */
 function Inspirational() {
     const [inspirational, setInspirational] = useState([]);
 

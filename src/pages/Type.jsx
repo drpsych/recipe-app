@@ -1,6 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 
+/**
+ * Fetches recipes of the given type from the Spoonacular API
+ * and displays them on the page.
+ *
+ * Uses the type parameter from the URL to determine which
+ * recipe type to fetch. Fetches the recipes on mount and when
+ * the type parameter changes. Displays the recipe titles and
+ * images in a grid layout.
+ */
 function Type() {
     const [type, setType] = useState([]);
     const [title, setTitle] = useState("");

@@ -3,6 +3,12 @@ import { useParams, Link } from "react-router-dom";
 
 import "./pages.css";
 
+/**
+ * Fetches diet recipes from Spoonacular API based on route param
+ * and displays them on the page.
+ *
+ * Uses React hooks for state and effects.
+ */
 function Diet() {
     const [diet, setDiet] = useState([]);
     const [title, setTitle] = useState("");

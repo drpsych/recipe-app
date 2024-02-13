@@ -3,6 +3,12 @@ import "./navigation.css";
 import { GiKnifeFork } from "react-icons/gi";
 import { Link, NavLink } from "react-router-dom";
 
+/**
+ * Navigation component that renders the menu bar.
+ *
+ * Contains links to different recipe filters and categories.
+ * Uses React Router NavLink for internal navigation.
+ */
 function Navigation() {
     return (
         <div>

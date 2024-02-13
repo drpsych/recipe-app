@@ -1,6 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
+/**
+ * Fetches recipe details by ID and displays them.
+ *
+ * Uses the useParams hook to get the recipe ID from the route parameters.
+ * Fetches recipe details from the Spoonacular API based on the ID.
+ * Stores details in React state with useState hook.
+ * Renders recipe title, image, summary, instructions, and ingredients.
+ * Tabs to toggle between instructions and ingredients.
+ */
 function Recipe() {
     let params = useParams();
     const [details, setDetails] = useState({});
