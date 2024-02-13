@@ -18,10 +18,7 @@ Technologies Used
 - Web Vitals for performance tracking
 - Spoonacular API for recipe data
 
-
 *Application will need API key from Spoonacular to work, see [API Key](#api-key) below for instructions.*
-
-
 
 ## Table of Contents
 - [Recipe-App](#recipe-app)
@@ -37,8 +34,6 @@ Technologies Used
 ## Prerequisites
 
 Before running the app, make sure you have Node.js installed on your system. You can download it from [Node.js](https://nodejs.org/en) website.
-
-
 
 ## Installation
 To install what's for dinner?:
@@ -74,15 +69,15 @@ The app should now be running at http://localhost:3000.
 ## API Key
 1. Navigate to Spoonacular website: https://spoonacular.com/food-api
    
-   <img src="public/markdown-images/1.png" width="800">
+   ![1](https://github.com/drpsych/recipe-app/assets/62787554/cd415ac9-673c-4059-b419-313502f10cf7)
    
 2. Sign up for an account at Spoonacular, or sign in if account is already active.
 
-   <img src="public/markdown-images/2.png" width="800">
+   ![2](https://github.com/drpsych/recipe-app/assets/62787554/627e3871-7dae-487e-8ad4-b27efc6a2c89)
 
 3. Navigate to "Profile" section and click on "Show/Hide API Key". 
    
-   <img src="public/markdown-images/3.png" width="800">
+   ![3](https://github.com/drpsych/recipe-app/assets/62787554/764414db-d628-4b95-9045-cdb9cbe095c7)
 
 4. Copy the API key and paste it into the .env file.
    
@@ -92,11 +87,9 @@ The app should now be running at http://localhost:3000.
        ```
        REACT_APP_API_KEY=<YOUR_API_KEY>
        ```
-      <img src="public/markdown-images/4.png" width="500">
+      ![4](https://github.com/drpsych/recipe-app/assets/62787554/0d7f15b3-84f1-4f4b-a066-634406e95922)
 
 5. If application is running with the `npm start` command, stop the application server by pressing <kbd>CTRL</kbd>+<kbd>C</kbd> in the terminal window. Altering a .env file requires the application to be restarted.
-
-
    
 6. Restart the application server: ```npm start```
 
