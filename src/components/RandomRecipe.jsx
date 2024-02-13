@@ -3,6 +3,7 @@ import "./components.css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { Link } from "react-router-dom";
+import { homePageResults } from "../config";
 
 /**
  * RandomRecipe component fetches and displays random recipes.
@@ -27,7 +28,7 @@ function RandomRecipe() {
             setRandom(JSON.parse(check));
         } else {
             const api = await fetch(
-                `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`
+                `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=${homePageResults}`
             );
             const data = await api.json();
 

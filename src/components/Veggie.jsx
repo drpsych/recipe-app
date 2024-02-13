@@ -3,6 +3,7 @@ import "./components.css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { Link } from "react-router-dom";
+import { homePageResults } from "../config";
 
 /**
  * Veggie component that fetches and displays random vegetarian recipes.
@@ -25,7 +26,7 @@ function Veggie() {
             setVeggie(JSON.parse(check));
         } else {
             const api = await fetch(
-                `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9&diet=vegetarian`
+                `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=${homePageResults}&diet=vegetarian`
             );
             const data = await api.json();
 

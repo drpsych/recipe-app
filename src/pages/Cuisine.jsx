@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-
+import { numberOfResults } from "../config";
 import "./pages.css";
 
 /**
@@ -17,7 +17,7 @@ function Cuisine() {
 
     const getCuisine = async (name) => {
         const data = await fetch(
-            `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}&number=${process.env.REACT_APP_RESULT_NUMBER}`
+            `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}&number=${numberOfResults}`
         );
         const recipes = await data.json();
         setCuisine(recipes.results);

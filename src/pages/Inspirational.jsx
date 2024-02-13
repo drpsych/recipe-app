@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { numberOfResults } from "../config";
 
 /**
  * Fetches random inspirational recipes from the Spoonacular API
@@ -20,7 +21,7 @@ function Inspirational() {
 
     const getInspirational = async () => {
         const api = await fetch(
-            `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&&number=${process.env.REACT_APP_RESULT_NUMBER}`
+            `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&&number=${numberOfResults}`
         );
         const data = await api.json();
         setInspirational(data.recipes);
