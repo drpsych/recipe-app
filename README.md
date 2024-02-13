@@ -3,17 +3,42 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
-what's for dinner? is a frontend applicaiton built with REACT JS. It was build utilizing an API from Spoonacular to allow users to search for recipes. Application will need API key from Spoonacular to work, see [API Key](#api-key) below for instructions.
+"what's for dinner?" is the ultimate solution for culinary enthusiasts and home cooks alike. This project is an application that allows users to explore a wide variety of recipes, offering inspiration and guidance for your next meal.
+
+**Features:**
+- Discover Recipes: Browse through a curated collection of recipes with beautiful imagery and easy-to-follow instructions.
+- Search Functionality: Find exactly what you're craving with our intuitive search feature.
+- Instructions: View detailed instructions on how to make each recipe.
+- Ingredient List: Keep track of ingredients you have or need for each recipe.
+
+Technologies Used
+- React.js for a component-based architecture
+- React Router for seamless navigation
+- React Icons for visually appealing iconography
+- Web Vitals for performance tracking
+- Spoonacular API for recipe data
+
+
+*Application will need API key from Spoonacular to work, see [API Key](#api-key) below for instructions.*
+
+
 
 ## Table of Contents
 - [Recipe-App](#recipe-app)
   - [Description](#description)
   - [Table of Contents](#table-of-contents)
+  - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Usage](#usage)
   - [API Key](#api-key)
   - [Contributing](#contributing)
   - [License](#license)
+
+## Prerequisites
+
+Before running the app, make sure you have Node.js installed on your system. You can download it from [Node.js](https://nodejs.org/en) website.
+
+
 
 ## Installation
 To install what's for dinner?:
