@@ -69,7 +69,9 @@ The app should now be running at http://localhost:3000.
        ```
       <img src="public/markdown-images/4.png" width="500">
 
-5. If application is running with the ```npm start``` command, stop the application server by pressing CTRL+C in the terminal window. Altering a .env file requires the application to be restarted.
+5. If application is running with the `npm start` command, stop the application server by pressing <kbd>CTRL</kbd>+<kbd>C</kbd> in the terminal window. Altering a .env file requires the application to be restarted.
+
+
    
 6. Restart the application server: ```npm start```
 

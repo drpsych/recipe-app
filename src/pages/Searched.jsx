@@ -1,13 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import { numberOfResults } from "../config";
 
+/**
+ * Searched component fetches and displays recipes matching the search query.
+ *
+ * Uses the useParams hook to get the search query from the route params.
+ * Fetches recipes by search query from the Spoonacular API.
+ * Displays loading state, search results grid, or no results message based on API response.
+ */
 function Searched() {
     const [searchedRecipes, setSearchedRecipes] = useState([]);
     let params = useParams();
 
     const getSearched = async (name) => {
         const data = await fetch(
-            `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=${name}&number=${process.env.REACT_APP_RESULT_NUMBER}`
+            `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=${name}&number=${numberOfResults}`
         );
         const recipes = await data.json();
         setSearchedRecipes(recipes.results);

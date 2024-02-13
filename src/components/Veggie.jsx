@@ -3,8 +3,14 @@ import "./components.css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { Link } from "react-router-dom";
-import { homePageResults } from "./config";
+import { homePageResults } from "../config";
 
+/**
+ * Veggie component that fetches and displays random vegetarian recipes.
+ * Uses React hooks for state management and Splide for carousel display.
+ * Fetches data from Spoonacular API and caches in localStorage.
+ * Allows navigating to view more vegetarian recipes.
+ */
 function Veggie() {
     const [veggie, setVeggie] = useState([]);
 
