@@ -2,6 +2,7 @@ import Search from "./components/Search";
 import Pages from "./pages/Pages";
 import { BrowserRouter } from "react-router-dom";
 import Navigation from "./components/MenuBar/Navigation";
+import Footer from "./components/Footer";
 
 function App() {
     return (
@@ -9,7 +10,10 @@ function App() {
             <BrowserRouter>
                 <Navigation />
                 <Search />
-                <Pages />
+                <div className="pages">
+                    <Pages />
+                </div>
+                {/* <Footer /> */}
             </BrowserRouter>
         </div>
     );

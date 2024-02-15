@@ -33,15 +33,16 @@
             font-size: 1.4rem;
             padding: 1rem;
         }
-
-        /* h4:hover {
-            text-shadow: 0px 0px 10px var(--accent-color-bright);
-            transition: all 150ms ease-in-out 0s;
-        } */
     }
     .recipe-card:hover {
-        text-shadow: 0px 0px 10px var(--accent-color-bright);
-        transition: all 150ms ease-in-out 0s;
+        text-shadow: 0px 0px 15px var(--accent-color);
+        transition: all 150ms ease 0s;
+
+        img {
+            /* border: 2px solid var(--accent-color); */
+            box-shadow: 0px 0px 30px var(--accent-color);
+            transition: all 150ms ease 0s;
+        }
     }
 }
 
@@ -72,7 +73,8 @@
 
     .active {
         background: var(--accent-color);
-        color: white;
+        border: 2px solid var(--accent-color);
+        color: var(--color-white);
     }
 
     ul {
@@ -92,8 +94,8 @@
     button {
         padding: 1rem 2rem;
         color: #313131;
-        background: white;
-        border: 2px solid var(--accent-color);
+        background: var(--color-white);
+        border: 2px solid var(--secondary-color);
         border-radius: 1rem;
         margin-right: 2rem;
         font-weight: 600;
@@ -117,4 +119,43 @@
     p {
         font-size: 1.5rem;
     }
+}
+
+/* 404 Page not found style */
+.NotFoundPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* height: auto; */
+    text-align: center;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+}
+
+.NotFoundPage h1 {
+    font-size: 6em;
+    margin-bottom: 0.5em;
+}
+
+.NotFoundPage h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.NotFoundPage p {
+    margin-bottom: 2em;
+}
+
+.NotFoundPage a {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.NotFoundPage a:hover {
+    background-color: #0056b3;
 }

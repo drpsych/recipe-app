@@ -1,15 +1,23 @@
 :root {
-    --primary-color: #ff9f1c;
-    --secondary-color: #ffbf69;
-    --accent-color: #2ec4b6;
-    --accent-color-bright: #38f2e0;
+    --primary-color: #69b578;
+    --secondary-color: #a5d3ae;
+    --light-gray: #e1e1e1;
+    --light-gray-2: #cbcbcb;
+    --accent-color: #ff9f1c;
+    --accent-color-bright: #ffb249;
     --background-color: #ffffff;
+    --off-white: #f9f9f9;
     --text-color: #090707;
     --shadow: rgba(0, 0, 0, 0.543);
     --shadow2: rgba(0, 0, 0, 0.625);
-    --action-color: hsl(48, 100%, 50%);
-    --action-color2: hsl(48, 80%, 50%);
-    --white: white;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --nav-background: var(--primary-color);
+    --search-bar: linear-gradient(
+        35deg,
+        var(--light-gray-2),
+        var(--light-gray)
+    );
 }
 
 * {
@@ -26,11 +34,15 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    margin: 0% 5%;
+    margin: 0% 0%;
     background: var(--background-color);
 }
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
         monospace;
+}
+
+.pages {
+    margin: 0% 5%;
 }
