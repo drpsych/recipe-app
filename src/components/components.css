@@ -73,7 +73,8 @@
             .text-link {
                 text-align: center;
                 text-decoration: none;
-                color: var(--color-white);
+                color: var(--text-color);
+                font-weight: 500;
             }
         }
         .btn:hover {
@@ -155,7 +156,7 @@ form.search {
         width: 100%;
 
         &::placeholder {
-            color: var(--text-color);
+            color: var(--light-gray-3);
         }
     }
 
@@ -164,22 +165,33 @@ form.search {
         top: 50%;
         left: 0%;
         transform: translate(100%, -50%);
-        color: var(--text-color);
+        color: var(--light-gray-3);
     }
 }
 
 .footer {
     position: absolute;
+    display: flex;
     height: auto;
-    margin: 1rem 0 0 -5%;
+    /* margin: 1rem 0 0 -5%; */
     padding-top: 2rem;
     padding-bottom: 2rem;
     padding-inline: 5%;
     width: 100%;
-    background: var(--primary-color);
-    text-align: center;
+    background: var(--primary-color-dark);
+    /* text-align: center; */
 
+    .contact {
+        display: flex;
+
+        /* margin-inline-start: 5rem; */
+    }
     p {
-        font-size: 1.5rem;
+        color: var(--accent-color);
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--accent-color);
     }
 }

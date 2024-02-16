@@ -27,7 +27,8 @@
     .menu {
         overflow: hidden;
         background-color: var(--nav-background);
-        font-family: Arial;
+        /* font-family: Arial; */
+        font-weight: bold;
         margin-left: 2rem;
         /* border-radius: 1rem; */
         /* Links inside the navbar */
@@ -50,6 +51,7 @@
     /* Dropdown button */
     .dropdown .dropbtn {
         font-size: 16px;
+        font-weight: bold;
         border: none;
         outline: none;
         color: var(--text-color);
@@ -57,13 +59,14 @@
         background-color: inherit;
         font-family: inherit; /* Important for vertical align on mobile phones */
         margin: 0; /* Important for vertical align on mobile phones */
-        font-weight: lighter;
+        /* font-weight: lighter; */
     }
 
     /* Add an (action color) background color to navbar links on hover */
     .menu a:hover,
     .dropdown:hover .dropbtn {
         text-decoration: underline var(--accent-color) 0.33rem;
+        text-decoration-skip-ink: none;
         /* background-color: var(--accent-color); */
         color: var(--text-color);
     }
@@ -76,6 +79,7 @@
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px var(--shadow);
         z-index: 1;
+        font-weight: normal;
     }
 
     /* Links inside the dropdown */

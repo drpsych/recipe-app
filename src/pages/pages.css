@@ -149,13 +149,13 @@
 
 .NotFoundPage a {
     padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
+    background-color: var(--accent-color);
+    color: var(--text-color);
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 10px;
     transition: background-color 0.3s;
 }
 
 .NotFoundPage a:hover {
-    background-color: #0056b3;
+    background-color: var(--accent-color-bright);
 }
