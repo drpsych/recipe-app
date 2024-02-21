@@ -173,24 +173,28 @@ form.search {
     position: absolute;
     display: flex;
     height: auto;
+    justify-content: space-between;
+    align-items: center;
     /* margin: 1rem 0 0 -5%; */
     padding-top: 2rem;
     padding-bottom: 2rem;
     padding-inline: 5%;
     width: 100%;
-    background: var(--primary-color-dark);
+    background: var(--primary-color);
     /* text-align: center; */
 
     .contact {
-        display: flex;
-
+        margin-left: auto;
         /* margin-inline-start: 5rem; */
     }
-    p {
+    .icon {
         color: var(--accent-color);
+        margin-inline: 0.5rem;
+        font-size: 32px;
     }
 
     a {
+        font-size: 24px;
         text-decoration: none;
         color: var(--accent-color);
     }
