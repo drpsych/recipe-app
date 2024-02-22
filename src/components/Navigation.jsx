@@ -11,12 +11,12 @@ function Navigation() {
                 <Link className="logo" to={"/"}>
                     what's for dinner?
                 </Link>
-                <div className="menu">
+                <div className="menu nav-text">
                     <NavLink className="nav-link" to="/">
                         Home
                     </NavLink>
-                    <div className="dropdown">
-                        <button className="dropbtn">
+                    <div className="dropdown nav-text">
+                        <button className="dropbtn nav-text">
                             Cuisine <i class="fa fa-caret-down"></i>
                         </button>
                         <div className="dropdown-content">
@@ -34,7 +34,7 @@ function Navigation() {
                             <NavLink to={"cuisine/Mexican"}>Mexican</NavLink>
                         </div>
                     </div>
-                    <div className="dropdown">
+                    <div className="dropdown nav-text">
                         <button className="dropbtn">
                             Diet <i class="fa fa-caret-down"></i>
                         </button>
@@ -49,7 +49,7 @@ function Navigation() {
                             </NavLink>
                         </div>
                     </div>
-                    <div className="dropdown">
+                    <div className="dropdown nav-text">
                         <button className="dropbtn">
                             Type <i class="fa fa-caret-down"></i>
                         </button>
